@@ -1,0 +1,1632 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apex Career Lab · Professional CV Revamping &amp; ATS Optimization</title>
+<meta name="description" content="We turn outdated resumes into high-impact, ATS-optimized career tools that get you hired. Send your CV for a 100% free review.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,4 26,14 21,19 16,14 11,19 6,14' fill='%23F59E0B'/><polygon points='16,14 21,19 16,24 11,19' fill='%23FFFFFF'/></svg>">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+  :root {
+    --sc-canvas:      #080b10;
+    --sc-surface:     #0f141f;
+    --sc-ink:         #f8fafc;
+    --sc-ink-soft:    #94a3b8;
+    --sc-accent:      #f59e0b;
+    --sc-accent-ink:  #080b10;
+    --sc-accent-glow: #fbbf24;
+    --sc-whatsapp:    #25d366;
+    --sc-font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --sc-font-text:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Navigation Bar */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--sc-gutter);
+    background: rgba(8, 11, 16, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--sc-hairline);
+  }
+
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--sc-ink);
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-text {
+    font-weight: 900;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .brand-text span:first-child {
+    color: #fff;
+  }
+
+  .brand-text span:last-child {
+    color: var(--sc-accent);
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--sc-whatsapp);
+    color: #052210;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border-radius: var(--sc-r-pill);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  }
+
+  /* Hero Depth Scene (Act 1) */
+  .hero-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+
+  .hero-plate {
+    position: absolute;
+    inset: -5%;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    opacity: 0.35;
+    filter: brightness(0.7) contrast(1.15);
+    transform: translateY(calc(var(--sc-p, 0) * 10%));
+    will-change: transform;
+  }
+
+  .hero-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 45%, rgba(8,11,16,0.2) 0%, rgba(8,11,16,0.92) 80%, #080b10 100%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    text-align: center;
+    padding: 0 var(--sc-gutter);
+    transform: translateY(calc(var(--sc-p, 0) * -12%));
+    will-change: transform;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: var(--sc-r-pill);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid var(--sc-accent);
+    color: var(--sc-accent-glow);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: var(--sc-4);
+  }
+
+  .hero-badge::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--sc-accent);
+  }
+
+  .hero-display {
+    font-size: var(--sc-t-3xl);
+    line-height: 1.0;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: var(--sc-3);
+  }
+
+  .hero-display span {
+    color: var(--sc-accent);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: var(--sc-t-base);
+    color: var(--sc-ink-soft);
+    line-height: var(--sc-leading-body);
+    max-width: 660px;
+    margin: 0 auto var(--sc-6);
+  }
+
+  .hero-card-preview {
+    margin: 0 auto;
+    max-width: 540px;
+    background: rgba(16, 21, 32, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--sc-r-lg);
+    padding: var(--sc-4) var(--sc-5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    transform: perspective(1000px) rotateX(calc(8deg - var(--sc-p, 0) * 8deg)) translateY(calc(var(--sc-p, 0) * 15px));
+    transition: transform 0.1s linear;
+  }
+
+  .hero-card-preview .tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--sc-accent);
+    letter-spacing: 0.08em;
+  }
+
+  .hero-card-preview h4 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 4px 0 2px;
+  }
+
+  .hero-card-preview p {
+    font-size: 0.8rem;
+    color: var(--sc-ink-soft);
+  }
+
+  .metric-badge {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    color: #34d399;
+    padding: 6px 14px;
+    border-radius: var(--sc-r-md);
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .metric-badge span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--sc-ink-soft);
+  }
+
+  /* Tension Sequence (Act 2) */
+  .tension-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--sc-gutter);
+  }
+
+  .tension-wrap {
+    max-width: 780px;
+    width: 100%;
+  }
+
+  .tension-item {
+    background: var(--sc-surface);
+    border: 1px solid #1e2838;
+    border-left: 4px solid var(--sc-accent);
+    padding: var(--sc-5);
+    border-radius: var(--sc-r-md);
+    margin-bottom: var(--sc-4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  }
+
+  .tension-item h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .tension-item p {
+    font-size: 0.95rem;
+    color: var(--sc-ink-soft);
+    line-height: var(--sc-leading-body);
+  }
+
+  /* Signature Move: Live ATS Scanner & Redliner (Act 3 - PEAK) */
+  .xray-stage-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--sc-gutter);
+  }
+
+  .xray-header {
+    text-align: center;
+    max-width: 720px;
+    margin-bottom: var(--sc-4);
+  }
+
+  .xray-header h2 {
+    font-size: var(--sc-t-2xl);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  .xray-header h2 span {
+    color: var(--sc-accent);
+  }
+
+  .xray-header p {
+    font-size: 0.9rem;
+    color: var(--sc-ink-soft);
+    margin-top: 6px;
+  }
+
+  .xray-comparator {
+    max-width: 980px;
+    width: 100%;
+    position: relative;
+    background: #0d121c;
+    border: 1px solid #253146;
+    border-radius: var(--sc-r-lg);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+    overflow: hidden;
+  }
+
+  /* Scanning Laser Line (Signature Move Animation) */
+  .scanner-line {
+    position: absolute;
+    top: 48px;
+    bottom: 0;
+    left: calc(var(--sc-p, 0.5) * 100%);
+    width: 3px;
+    background: #f59e0b;
+    box-shadow: 0 0 16px #f59e0b, 0 0 30px #f59e0b;
+    z-index: 20;
+    pointer-events: none;
+    transition: left 0.08s linear;
+  }
+
+  .scanner-line::before {
+    content: "SCANNING ATS MATCH";
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    background: #f59e0b;
+    color: #080b10;
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+  }
+
+  .xray-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    background: #131a26;
+    border-bottom: 1px solid #1e2838;
+  }
+
+  .xray-telemetry {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .telemetry-item {
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .score-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: var(--sc-r-sm);
+    font-weight: 900;
+    font-size: 0.78rem;
+  }
+
+  .score-box.before {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid #ef4444;
+  }
+
+  .score-box.after {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid #10b981;
+  }
+
+  .xray-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #1e2838;
+  }
+
+  @media (max-width: 768px) {
+    .xray-body {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .xray-col {
+    background: #0f1522;
+    padding: var(--sc-5);
+  }
+
+  .xray-col.before {
+    background: #11141c;
+  }
+
+  .xray-col.after {
+    background: #0c1622;
+    border-left: 2px solid var(--sc-accent);
+  }
+
+  .col-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--sc-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .col-label.before { color: #f87171; }
+  .col-label.after { color: var(--sc-accent); }
+
+  .resume-snippet {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--sc-r-md);
+    padding: var(--sc-3) var(--sc-4);
+    margin-bottom: var(--sc-3);
+  }
+
+  .resume-snippet h50{
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  .bullet-bad {
+    color: #94a3b8;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 6px;
+  }
+
+  .bullet-bad::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #ef4444;
+    font-weight: 900;
+  }
+
+  .bullet-good {
+    color: #e2e8f0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 6px;
+  }
+
+  .bullet-good::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: 900;
+  }
+
+  .highlight-tag {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--sc-accent-glow);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+
+  /* Substance Grid (Act 4) */
+  .substance-wrap {
+    max-width: var(--sc-maxw);
+    margin: 0 auto;
+    padding: var(--sc-section) var(--sc-gutter);
+  }
+
+  .section-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--sc-8);
+  }
+
+  .section-intro h2 {
+    font-size: var(--sc-t-2xl);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: var(--sc-3);
+  }
+
+  .section-intro h2 span {
+    color: var(--sc-accent);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--sc-5);
+  }
+
+  .service-box {
+    background: var(--sc-surface);
+    border: 1px solid var(--sc-hairline);
+    border-radius: var(--sc-r-lg);
+    padding: var(--sc-6);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .service-box:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 158, 11, 0.5);
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--sc-r-md);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid var(--sc-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--sc-4);
+    color: var(--sc-accent);
+  }
+
+  .service-box h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: var(--sc-2);
+  }
+
+  .service-box p {
+    font-size: 0.9rem;
+    color: var(--sc-ink-soft);
+    line-height: var(--sc-leading-body);
+  }
+
+  /* Range: Pricing Deck (Act 5) */
+  .pricing-deck {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sc-5);
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-deck {
+      grid-template-columns: 1fr;
+      max-width: 440px;
+    }
+  }
+
+  .price-card {
+    background: #0d121a;
+    border: 1px solid #1e2838;
+    border-radius: var(--sc-r-lg);
+    padding: var(--sc-6);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .price-card.featured {
+    background: #141c28;
+    border: 2px solid var(--sc-accent);
+    transform: scale(1.04);
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.18);
+    z-index: 2;
+  }
+
+  .featured-tag {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--sc-accent);
+    color: #080b10;
+    font-weight: 900;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    border-radius: var(--sc-r-pill);
+    text-transform: uppercase;
+  }
+
+  .plan-name {
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sc-ink-soft);
+    margin-bottom: var(--sc-2);
+  }
+
+  .price-card.featured .plan-name {
+    color: var(--sc-accent);
+  }
+
+  .plan-price {
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: var(--sc-4);
+  }
+
+  .plan-price span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--sc-ink-soft);
+  }
+
+  .plan-features {
+    list-style: none;
+    margin-bottom: var(--sc-6);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cbd5e1;
+  }
+
+  .plan-features li::before {
+    content: "✓";
+    color: var(--sc-accent);
+    font-weight: 900;
+  }
+
+  .plan-btn {
+    display: block;
+    text-align: center;
+    padding: 12px 18px;
+    border-radius: var(--sc-r-pill);
+    font-weight: 800;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .plan-btn.primary {
+    background: var(--sc-whatsapp);
+    color: #052210;
+  }
+
+  .plan-btn.primary:hover {
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  }
+
+  .plan-btn.outline {
+    background: transparent;
+    border: 1px solid #334155;
+    color: #fff;
+  }
+
+  .plan-btn.outline:hover {
+    background: #1e2838;
+  }
+
+  /* Commitment Act (Act 6) */
+  .commit-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 var(--sc-gutter);
+    background: radial-gradient(circle at 50% 50%, #131b28 0%, #080b10 80%);
+  }
+
+  .commit-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .commit-title {
+    font-size: var(--sc-t-2xl);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: var(--sc-3);
+  }
+
+  .commit-title span {
+    color: var(--sc-accent);
+  }
+
+  .commit-sub {
+    font-size: 1.05rem;
+    color: var(--sc-ink-soft);
+    margin-bottom: var(--sc-6);
+    line-height: var(--sc-leading-body);
+  }
+
+  .whatsapp-big-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--sc-whatsapp);
+    color: #041f0f;
+    padding: 16px 32px;
+    border-radius: var(--sc-r-pill);
+    font-weight: 900;
+    font-size: 1.15rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .whatsapp-big-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55);
+  }
+
+  .trust-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: var(--sc-6);
+    color: var(--sc-ink-soft);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .trust-strip span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .trust-strip span::before {
+    content: "•";
+    color: var(--sc-accent);
+  }
+
+  .trust-strip span:first-child::before {
+    display: none;
+  }
+
+  /* Site Footer */
+  .site-footer {
+    width: 100%;
+    margin-top: var(--sc-7);
+    padding-top: var(--sc-4);
+    border-top: 1px solid var(--sc-hairline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  .site-footer a {
+    color: var(--sc-ink-soft);
+    text-decoration: none;
+  }
+
+  /* Ghost Navigation Button */
+  .nav-ghost-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: var(--sc-ink);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: var(--sc-r-pill);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .nav-ghost-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--sc-accent);
+    color: #fff;
+  }
+
+  /* Floating WhatsApp Speed-Dial */
+  .floating-wa-speeddial {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 20, 31, 0.92);
+    border: 1px solid rgba(37, 211, 102, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(37, 211, 102, 0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: var(--sc-r-pill);
+    padding: 8px 16px 8px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  }
+
+  .floating-wa-speeddial:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(37, 211, 102, 0.45);
+  }
+
+  .wa-pulse-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--sc-whatsapp);
+    color: #052210;
+    display: grid;
+    place-items: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .wa-pulse-icon::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    border: 2px solid var(--sc-whatsapp);
+    opacity: 0.6;
+    animation: wa-pulse 2s infinite ease-out;
+  }
+
+  @keyframes wa-pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+
+  .wa-text-col {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .wa-text-col span:first-child {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .wa-text-col span:last-child {
+    font-size: 0.68rem;
+    color: #4ade80;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .wa-text-col span:last-child::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+  }
+
+  /* Interactive Lead Intake Modal */
+  .intake-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(4, 7, 12, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sc-gutter);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .intake-modal-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .intake-modal-dialog {
+    background: #0f1523;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--sc-r-lg);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(245, 158, 11, 0.15);
+    width: 100%;
+    max-width: 540px;
+    max-height: 90vh;
+    overflow:-y: auto;
+    position: relative;
+    padding: var(--sc-6);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .intake-modal-backdrop.is-open .intake-modal-dialog {
+    transform: translateY(0) scale(1);
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: var(--sc-ink-soft);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+  }
+
+  .modal-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+
+  .intake-header {
+    margin-bottom: var(--sc-5);
+  }
+
+  .intake-header h3 {
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .intake-header h3 span {
+    color: var(--sc-accent);
+  }
+
+  .intake-header p {
+    color: var(--sc-ink-soft);
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+
+  .intake-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .intake-form-full {
+    grid-column: span 2;
+  }
+
+  .intake-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+  }
+
+  .intake-field label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .intake-field input,
+  .intake-field select,
+  .intake-field textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--sc-r-md);
+    padding: 10px 14px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .intake-field input:focus,
+  .intake-field select:focus,
+  .intake-field textarea:focus {
+    border-color: var(--sc-accent);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .intake-field select option {
+    background: #0f1523;
+    color: #fff;
+  }
+
+  .intake-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: var(--sc-5);
+  }
+
+  .intake-btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--sc-whatsapp);
+    color: #052210;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 14px 20px;
+    border-radius: var(--sc-r-pill);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+
+  .intake-btn-whatsapp:mover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+
+  .intake-btn-sheet {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--sc-ink);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: var(--sc-r-pill);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .intake-btn-sheet:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: var(--sc-accent);
+  }
+
+  .intake-status-box {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: var(--sc-r-md);
+    font-size: 0.82rem;
+    display: none;
+  }
+
+  .intake-status-box.success {
+    display: block;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    color: #34d399;
+  }
+
+  @media (max-width: 600px) {
+    .intake-form-grid {
+      grid-template-columns: 1fr;
+    }
+    .intake-form-full {
+      grid-column: span 1;
+    }
+    .floating-wa-speeddial span:last-child {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<span data-sc-progress></span>
+
+<!-- Sticky Navigation Bar -->
+<header class="site-nav">
+  <a href="#top" class="brand-mark">
+    <!-- Geometric Chevron Logo -->
+    <svg class="rand-logo" viewBox="0 0 100 100" fill="none">
+      <polygon points="50,15 80,45 65,60 50,45 35,60 20,45" fill="#F59E0B" />
+      <polygon points="50,45 65,60 50,75 35,60" fill="#FFFFFF" />
+    </svg>
+    <div class="brand-text">
+      <span>APEX</span>
+      <span>CAREER LAB</span>
+    </div>
+  </a>
+
+    <div class="nav-actions">
+      <button type="button" class="nav-ghost-btn" onclick="openIntakeModal('100% Free CV Review')">Instant Intake</button>
+      <a href="https://wa.me/27623871093?text=Hi%2C%20I%20would%20like%20a%20free%20review%20of%20my%20current%20CV." target="_blank" rel="noopener noreferrer" class="nav-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+        Claim Free CV Audit
+      </a>
+    </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= ACT 1: RECOGNITION (Dimensional Layered Hero) ================= -->
+  <section data-sc-act="pin" data-sc-span="2.4" data-sc-drift="#080b10">
+    <div data-sc-stage class="hero-stage">
+      <!-- Background Plate (Plane 0) -->
+      <img class="hero-plate" src="assets/city-plate.jpg" alt="Corporate architectural towers">
+      
+      <!-- Vignette Overlay -->
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <!-- Foreground Pinned Hero (Plane 1) -->
+      <div class="hero-content">
+        <div class="hero-badge">ATS-OPTIMIZED  •  RECRUITER APPROVED</div>
+        <h1 class="hero-display">
+          WE TRANSFORM YOUR
+          <span>CAREER.</span>
+        </h1>
+        <p class="hero-sub">
+          Stand out in 6 seconds, beat automated screening bots, and turn ignored applications into high-paying executive interviews.
+        </p>
+
+        <!-- Dimensional Floating Card Preview -->
+        <div class="hero-card-preview" data-sc-tilt="8">
+          <div>
+            <div class="tag">VERIFIED INTERVIEW MAGNET</div>
+            <h4>Executive CV &amp; Career Portfolio</h4>
+            <p>Keyword-engineered for Taleo, Workday &amp; Greenhouse</p>
+          </div>
+          <div class="metric-badge">
+            96%
+            <span>ATS SCORE</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="nav-cta" style="font-size:0.92rem; padding: 12px 24px; border:none; cursor:pointer;" onclick="openIntakeModal('100% Free CV Review')">
+            ⚡ Send CV for 100% FREE Review
+          </button>
+          <a href="#signature" class="nav-ghost-btn" style="text-decoration:none; display:inline-flex; align-items:center; padding: 12px 20px;">
+            Test ATS Scanner ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACT 2: TENSION (The Algorithmic Black Hole) ================= -->
+  <section data-sc-act="pin" data-sc-span="3.0" data-sc-drift="#0c1017">
+    <div data-sc-stage class="tension-stage">
+      <div class="tension-wrap">
+        <div class="tension-item" data-sc-cue="0 0.35 0">
+          <h3>The 6.2 Second Reality</h3>
+          <p>A hiring manager spends an average of 6.2 seconds scanning your resume before deciding whether to interview or discard you.</p>
+        </div>
+        
+        <div class="tension-item" data-sc-cue="0.25 0.60">
+          <h3>The Silent Algorithmic Graveyard</h3>
+          <p>Before any human ever reads your name, 85% of resumes are deleted by automated ATS filters due to non-compliant layouts and missing keyword density.</p>
+        </div>
+
+        <div class="tension-item" data-sc-cue="0.50 0.85">
+          <h3>The Hidden Cost of Passive Language</h3>
+          <p>Phrases like "assisted with" and unquantified job descriptions make accomplished professionals look like entry-level employees on paper.</p>
+        </div>
+
+        <div class="tension-item" data-sc-cue="0.68 1.0 0.85">
+          <h3 style="color:var(--sc-accent);">The Solution: Commercial Career Architecture</h3>
+          <p>Your competence is not the issue. How your value is framed is. That is exactly what we fix.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACT 3: TURN & SIGNATURE MOVE (Live ATS Scanner & Redliner) ================= -->
+  <section data-sc-act="pin" data-sc-span="3.0" data-sc-drift="#06090e">
+    <div data-sc-stage class="xray-stage-inner">
+      <div class="xray-header">
+        <div class="hero-badge" style="margin-bottom:8px;">SIGNATURE TRANSFORMATION</div>
+        <h2>The Anatomy of an <span>Interview Winner</span></h2>
+        <p>Watch how restructuring passive duty descriptions into quantified commercial metrics elevates your ATS match score from automatic rejection to top candidate.</p>
+      </div>
+
+      <!-- Interactive Comparator Container -->
+      <div class="xray-comparator">
+        <!-- Scanning Optical Laser Line -->
+        <div class="scanner-line"></div>
+
+        <div class="xray-topbar">
+          <div class="telemetry-item">
+            <span>TARGET ROLE:</span>
+            <strong style="color:#fff;">Operations Director / Senior Manager</strong>
+          </div>
+          <div class="xray-telemetry">
+            <div class="telemetry-item">
+              <span>BEFORE:</span>
+              <span class="score-box before">34% REJECTED</span>
+            </div>
+            <div class="telemetry-item">
+              <span>AFTER REVAMP:</span>
+              <span class="score-box after">96% INTERVIEW</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="xray-body">
+          <!-- Before Column -->
+          <div class="xray-col before">
+            <div class="col-label before">
+              <span>🔴 OUTDATED DRAFT (IGNORED)</span>
+              <span>0 CALLBACKS</span>
+            </div>
+
+            <div class="resume-snippet">
+              <h5>Professional Experience</h5>
+              <div class="bullet-bad">Responsible for managing team members and helping with daily operational logistics.</div>
+              <div class="bullet-bad">Handled client communications, customer inquiries and regular reports.</div>
+              <div class="bullet-bad">Assisted department with quarterly budget planning and cost management.</div>
+            </div>
+
+            <div style="font-size:0.75rem; color:#f87171; line-height:1.4;">
+              ⚠️ <strong>ATS Failure:</strong> Zero quantified ROI, weak passive verbs, missing critical industry taxonomy.
+            </div>
+          </div>
+
+          <!-- After Column -->
+          <div class="xray-col after">
+            <div class="col-label after">
+              <span>🟢 APEX REVAMP (EXECUTIVE READY)</span>
+              <span>TOP 1% CANDIDATE</span>
+            </div>
+
+            <div class="resume-snippet">
+              <h5>Executive Experience &amp; Leadership</h5>
+              <div class="bullet-good">Directed cross-functional team of <span class="highlight-tag">18 engineers &amp; managers</span>, scaling regional workflow throughput by <span class="highlight-tag">42%</span> across 3 quarters.</div>
+              <div class="bullet-good">Negotiated strategic vendor contracts, securing <span class="highlight-tag">$680,000 in annualized savings</span> while improving delivery SLA compliance to 99.4%.</div>
+              <div class="bullet-good">Architected quarterly financial model managing <span class="highlight-tag">$4.8M OPEX budget</span> with zero variance audit compliance.</div>
+            </div>
+
+            <div style="font-size:0.75rem; color:#34d399; line-height:1.4;">
+              ✅ <strong>ATS Result:</strong> 96% match score across Workday &amp; Taleo. Immediately flagged for recruiter interview.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACT 4: SUBSTANCE (The 6 Pillars of Transformation) ================= -->
+  <section class="sc-section substance-wrap" data-sc-act="flow" data-sc-drift="#0a0d14">
+    <div class="section-intro">
+      <div class="hero-badge">SYSTEMATIC METHODOLOGY</div>
+      <h2>Every Document Built For <span>Real Recruiter Decisions</span></h2>
+      <p class="sc-body">We do not just format fonts and margins. We execute a comprehensive commercial repositioning of your career.</p>
+    </div>
+
+    <div class="services-grid" data-sc-in data-sc-stagger="60">
+      <!-- Pillar 1 -->
+      <article class="service-box">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+          </svg>
+        </div>
+        <h3>CV &amp; Resume Revamping</h3>
+        <p>Complete structural overhaul. We rewrite weak phrasing into measurable achievements, power verbs, and commercial value narratives.</p>
+      </article>
+
+      <!-- Pillar 2 -->
+      <article class="service-box">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <h3>ATS Bot-Passing Optimization</h3>
+        <p>Tested against modern algorithms. We inject high-relevance industry taxonomy so your CV scores 90%+ and bypasses automated filters.</p>
+      </article>
+
+      <!-- Pillar 3 -->
+      <article class="service-box">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>
+          </svg>
+        </div>
+        <h3>Fresh CVs From Scratch</h3>
+        <p>Built from ground zero for students, fresh graduates, or seasoned professionals pivoting into completely new industries.</p>
+      </article>
+
+      <!-- Pillar 4 -->
+      <article class="service-box">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <h3>Tailored Cover Letters</h3>
+        <p>Persuasive, role-specific letters designed to hook hiring managers within the first 5 lines and explain your exact culture fit.</p>
+      </article>
+
+      <!-- Pillar 5 -->
+      <article class="service-box">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </div>
+        <h3>LinkedIn All-Star Makeover</h3>
+        <p>Headline positioning, rich 'About' narrative, and search keyword SEO that pulls recruiters directly into your inbox.</p>
+      </article>
+
+      <!-- Pillar 6 -->
+      <article class="service-box">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3>Executive Bio &amp; Interview Prep</h3>
+        <p>1-page board-ready bios, portfolio structure, and tactical answer frameworks to conquer challenging interview questions.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= ACT 5: RANGE (Transparent, Fair Pricing) ================= -->
+  <section class="sc-section" data-sc-act="pan" data-sc-span="2.6" data-sc-drift="#080c12">
+    <div class="sc-wrap">
+      <div class="section-intro">
+        <div class="hero-badge">TRANSPARENT &amp; FAIR INVESTMENT</div>
+        <h2>Affordable Pricing. <span>Executive Quality.</span></h2>
+        <p class="sc-body">No hidden consultation fees. Choose the tier that matches your career stage.</p>
+      </div>
+
+      <div class="pricing-deck">
+        <!-- Tier 1: Basic -->
+        <div class="price-card" data-sc-tilt="6">
+          <div class="plan-name">Basic Polish</div>
+          <div class="plan-price">$15 <span>/ CV</span></div>
+          <ul class="plan-features">
+            <li>Modern layout &amp; typography restructure</li>
+            <li>Grammar, spelling &amp; syntax audit</li>
+            <li>Formatting alignment (Word &amp; PDF)</li>
+            <li>48-Hour delivery</li>
+          </ul>
+          <a href="https://wa.me/27623871093?text=Hi%2C%20I%20am%20interested%20in%20the%20Basic%20Polish%20plan%20(%2415)." target="_blank" rel="noopener noreferrer" class="plan-btn outline">Choose Basic</a>
+        </div>
+
+        <!-- Tier 2: Pro Revamp (Featured) -->
+        <div class="price-card featured" data-sc-tilt="8">
+          <div class="featured-tag">MOST POPULAR</div>
+          <div class="plan-name">Pro Revamp</div>
+          <div class="plan-price">$25 <span>/ CV</span></div>
+          <ul class="plan-features">
+            <li><strong>Complete content rewrite</strong> with power metrics</li>
+            <li><strong>90%+ ATS Score Guarantee</strong></li>
+            <li>Executive modern layout &amp; typography</li>
+            <li>Editable Word (.docx) &amp; Print-Ready PDF</li>
+            <li><strong>Unlimited revisions for 7 days</strong></li>
+            <li>24–48h Priority turnaround</li>
+          </ul>
+          <a href="https://wa.me/27623871093?text=Hi%2C%20I%20am%20interested%20in%20the%20Pro%20Revamp%20plan%20(%2425)." target="_blank" rel="noopener noreferrer" class="plan-btn primary">Choose Pro Revamp</a>
+        </div>
+
+        <!-- Tier 3: Career Combo -->
+        <div class="price-card" data-sc-tilt="6">
+          <div class="plan-name">Career Combo</div>
+          <div class="plan-price">$40 <span>/ Bundle</span></div>
+          <ul class="plan-features">
+            <li><strong>Full Pro CV Revamp included</strong></li>
+            <li>Custom Tailored Cover Letter ($15 value)</li>
+            <li>LinkedIn All-Star Optimization Guide</li>
+            <li>Editable source files (Word + PDF)</li>
+            <li>Priority 24-hour turnaround</li>
+          </ul>
+          <a href="https://wa.me/27623871093?text=Hi%2C%20I%20am%20interested%20in%20the%20Full%20Career%20Combo%20(%2440)." target="_blank" rel="noopener noreferrer" class="plan-btn outline">Choose Combo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACT 6: COMMITMENT (Direct WhatsApp Terminal) ================= -->
+  <section id="contact" data-sc-act="pin" data-sc-span="1.2" data-sc-drift="#080b10">
+    <div data-sc-stage class="commit-stage" data-sc-spotlight>
+      <div class="commit-content">
+        <div class="hero-badge" style="margin-bottom:16px;">ZERO RISK • COMPLIMENTARY REVIEW</div>
+        <h2 class="commit-title">
+          Send Me Your Current CV Right Now for a <span>100% FREE</span> Review &amp; Feedback.
+        </h2>
+        <p class="commit-sub">
+          No automated forms. No waitlists. Message me directly on WhatsApp and receive an honest, personalized audit of your resume within hours.
+        </p>
+
+        <a class="whatsapp-big-btn" href="https://wa.me/27623871093?text=Hi%2C%20I%20would%20like%20to%20send%20my%20current%20CV%20for%20a%20100%25%20free%20review%20and%20feedback." target="_blank" rel="noopener noreferrer" data-sc-magnet="0.25">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          Chat on WhatsApp: +27 62 387 1093
+        </a>
+
+        <div class="trust-strip">
+          <span>⚡ Fast 24–48h Delivery</span>
+          <span>🔄 100% Satisfaction Guarantee</span>
+          <span>📁 Word (.docx) &amp; Print PDF Included</span>
+          <span>🌍 Global Clients Served</span>
+        </div>
+
+        <footer class="site-footer">
+          <div>© 2026 Apex Career Lab. All rights reserved.</div>
+          <div>Direct line: <a href="tel:+27623871093">+27 62 387 1093</a></div>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating WhatsApp Speed-Dial Pill -->
+<a href="https://wa.me/27623871093?text=Hi%2C%20I%20would%20like%20to%20send%20my%20current%20CV%20for%20a%20100%25%20free%20review%20and%20feedback." target="_blank" rel="noopener noreferrer" class="floating-wa-speeddial" aria-label="Chat on WhatsApp">
+  <div class="wa-pulse-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+    </svg>
+  </div>
+  <div class="wa-text-col">
+    <span>+27 62 387 1093</span>
+    <span>Online • Free CV Review</span>
+  </div>
+</a>
+
+<!-- Lead Intake & Audit Modal -->
+<div id="intakeModal" class="intake-modal-backdrop" onclick="if(event.target === this) closeIntakeModal()">
+  <div class="intake-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close-btn" onclick="closeIntakeModal()" aria-label="Close modal">&times;</button>
+    <div class="intake-header">
+      <div class="hero-badge" style="margin-bottom:8px;">EXPRESS CAREER INTAKE</div>
+      <h3 id="modalTitle">Claim Your <span>100% FREE</span> CV Audit</h3>
+      <p>Submit your details below. We examine keyword density, ATS compliance, and recruiter impact within 24 hours.</p>
+    </div>
+
+    <form id="leadIntakeForm" onsubmit="event.preventDefault();">
+      <div class="intake-form-grid">
+        <div class="intake-field intake-form-full">
+          <label for="leadName">Full Name *</label>
+          <input type="text" id="leadName" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="intake-field">
+          <label for="leadPhone">WhatsApp Number *</label>
+          <input type="tel" id="leadPhone" placeholder="+27 82 123 4567" required>
+        </div>
+
+        <div class="intake-field">
+          <label for="leadEmail">Email Address</label>
+          <input type="email" id="leadEmail" placeholder="alex@example.com">
+        </div>
+
+        <div class="intake-field intake-form-full">
+          <label for="leadPackage">Selected Service / Interest</label>
+          <select id="leadPackage">
+            <option value="100% Free CV Review & Feedback">100% Free CV Review &amp; Feedback ($0)</option>
+            <option value="Basic Polish ($15)">Basic Polish — $15</option>
+            <option value="Pro Revamp ($25)">Pro Revamp (Most Popular) — $25</option>
+            <option value="Career Combo ($40)">Career Combo (CV + Cover Letter + LinkedIn) — $40</option>
+          </select>
+        </div>
+
+        <div class="intake-field intake-form-full">
+          <label for="leadTargetRole">Target Role or Industry</label>
+          <input type="text" id="leadTargetRole" placeholder="e.g. Senior Software Engineer / Financial Analyst">
+        </div>
+
+        <div class="intake-field intake-form-full">
+          <label for="leadNotes">Current Challenge or Specific Goal</label>
+          <textarea id="leadNotes" rows="2" placeholder="e.g. Getting ghosted after submitting, switching industries, need ATS formatting..."></textarea>
+        </div>
+      </div>
+
+      <div class="intake-actions">
+        <button type="button" class="intake-btn-whatsapp" onclick="handleWhatsAppSubmit()">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          Send Request to WhatsApp Instantly
+        </button>
+        <button type="button" class="intake-btn-sheet" onclick="handleLeadCaptureSubmit()">
+          ⚡ Save Lead &amp; Request Callback
+        </button>
+      </div>
+
+      <div id="intakeStatus" class="intake-status-box"></div>
+    </form>
+  </div>
+</div>
+
+<script src="scrollcraft.js"></script>
+<script>
+  // Mount the scrollcraft engine
+  ScrollCraft.mount(document.body);
+
+  // Modal logic
+  function openIntakeModal(serviceName) {
+    const modal = document.getElementById('intakeModal');
+    if (modal) {
+      if (serviceName) {
+        const select = document.getElementById('leadPackage');
+        if (select) {
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].value.includes(serviceName) || select.options[i].text.includes(serviceName)) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeIntakeModal() {
+    const modal = document.getElementById('intakeModal');
+    if (modal) {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Escape key listener for modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeIntakeModal();
+  });
+
+  // Handle WhatsApp submission with pre-populated message
+  function handleWhatsAppSubmit() {
+    const name = document.getElementById('leadName').value.trim() || 'Prospective Client';
+    const phone = document.getElementById('leadPhone').value.trim() || 'Not specified';
+    const pkg = document.getElementById('leadPackage').value;
+    const target = document.getElementById('leadTargetRole').value.trim() || 'General';
+    const notes = document.getElementById('leadNotes').value.trim() || 'None';
+
+    const msg = `Hi Apex Career Lab,\n\nI would like to request a review of my CV!\n\n• Name: ${name}\n• Phone: ${phone}\n• Service: ${pkg}\n• Target Role: ${target}\n• Notes: ${notes}\n\nI am attaching my current CV now.`;
+    const waUrl = `https://wa.me/27623871093?text=${encodeURIComponent(msg)}`;
+    window.open(waUrl, '_blank');
+  }
+
+  // Handle Sheet / CRM Lead Capture
+  function handleLeadCaptureSubmit() {
+    const name = document.getElementById('leadName').value.trim();
+    const phone = document.getElementById('leadPhone').value.trim();
+    const email = document.getElementById('leadEmail').value.trim();
+    const pkg = document.getElementById('leadPackage').value;
+    const target = document.getElementById('leadTargetRole').value.trim();
+    const notes = document.getElementById('leadNotes').value.trim();
+    const statusBox = document.getElementById('intakeStatus');
+
+    if (!name || !phone) {
+      statusBox.className = 'intake-status-box';
+      statusBox.style.display = 'block';
+      statusBox.style.background = 'rgba(239, 68, 68, 0.15)';
+      statusBox.style.border = '1px solid #ef4444';
+      statusBox.style.color = '#fca5a5';
+      statusBox.textContent = 'Please fill in your Name and WhatsApp phone number.';
+      return;
+    }
+
+    const leadData = {
+      timestamp: new Date().toISOString(),
+      name,
+      phone,
+      email,
+      package: pkg,
+      targetRole: target,
+      notes
+    };
+
+    // Store in localStorage
+    try {
+      const existing = JSON.parse(localStorage.getItem('apex_leads') || '[]');
+      existing.push(leadData);
+      localStorage.setItem('apex_leads', JSON.stringify(existing));
+    } catch (e) {
+      console.warn('Storage unavailable', e);
+    }
+
+    statusBox.className = 'intake-status-box success';
+    statusBox.innerHTML = `✓ Request logged for <strong>${name}</strong>! We will contact you at <strong>${phone}</strong> shortly. You can also send your CV to <strong>+27 62 387 1093</strong> right now.`;
+  }
+</script>
+</body>
+</html>
